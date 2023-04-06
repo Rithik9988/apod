@@ -3,7 +3,7 @@ const path = require("path")
 const app = express()
 const hbs= require("hbs")
 const collection = require("./mongodb")
-
+const PORT = process.env.PORT || 3000;
 
 const templatePath=path.join(__dirname,'../templates')
 
@@ -54,6 +54,6 @@ app.post("/login",async(req,res)=>{
     })
    
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('port connected');
 }) 
