@@ -1,74 +1,105 @@
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #000;
+body{
+    overflow: hidden;
+  }
+  
+  .name{
+
+text-align:center;
+/*   margin-top:140px; */
+  font-size:37px;
+  position:relative;
+  font-family: 'Exo', sans-serif;
+  color:#fff;
 }
 
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
+.cristalBall{
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  z-index:99999;
 }
 
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+.background{
+  background-color:white;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
-.glow-on-hover:active {
-    color: #000
+.circle{
+  background-color:#fffdff;
+  height:1300px;
+  border-radius:50%;
+  width: 1300px;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-.glow-on-hover:active:after {
-    background: transparent;
+.circle1{
+  background-color:#fcefff;
+  height:1000px;
+  border-radius:50%;
+  width: 1000px;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  animation: pulse3 10s linear infinite;
 }
 
-.glow-on-hover:hover:before {
-    opacity: 1;
+.circle2{
+  background-color:#f3cafc;
+  height:700px;
+  border-radius:50%;
+  width: 700px;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  color:white;
+  font-size:40px;
+  transform: translate(-50%,-50%);
+  animation: pulse 4s linear infinite;
 }
 
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+.circle3{
+  background-color:#ee88fd;
+  height:500px;
+  border-radius:50%;
+  width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  font-size:50px;
+  animation: pulse2 3s linear infinite;
 }
 
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+.star{
+  transform: translate(350px,50px);
+  opacity:.6;
 }
 
+@keyframes pulse{
+  0%{width:700px;height:700px;}
+  50%{width:750px;height:750px;}
+  100%{width:700px;height:700px;}
+}
+
+@keyframes pulse2{
+  0%{width:500px;height:500px;}
+  50%{width:550px;height:550px;}
+  100%{width:500px;height:500px;}
+}
+
+@keyframes pulse3{
+  0%{width:1000px;height:1000px;}
+  50%{width:1050px;height:1050px;}
+  100%{width:1000px;height:1000px;}
+}
 
